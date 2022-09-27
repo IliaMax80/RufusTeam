@@ -11,7 +11,7 @@ public class flight : MonoBehaviour
     private float speedRotateWS = 0;
     private float maxSpeedRotate = 5;
     public float minSpeed = 0.01f;
-    public float maxSpeed = 5;
+    public float maxSpeed = 5f;
     private Rigidbody rb;
 
     // Start is called before the first frame update
