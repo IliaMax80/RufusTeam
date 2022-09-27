@@ -353,7 +353,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Prefabs/Asteroids Pack/Assets/Scripts/RandomRotator.cs"
+"Assets/Scripts/CameeraMove.cs"
 "Assets/Scripts/CommitTest.cs"
+"Assets/Scripts/flight.cs"
 -langversion:9.0
 
 /deterministic
