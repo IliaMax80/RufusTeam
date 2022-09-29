@@ -41,6 +41,8 @@ void Update()
     }
     private IEnumerator shot(GameObject target, Vector3 targetPosition)
     {
+        GetComponentInChildren<ShotSound>().audioPlay();
+        GetComponentInChildren<ShotSound>().audioPlay();
         updatePosition = true;
         lazer.positionCount = 2;
         lazer.SetPosition(0, transform.position);

@@ -4,9 +4,14 @@ ScriptsOnlyBuild:
     - AsteroidImpulse
     - AsteroidSpawn
     - CameraMove
+    - EnemyMovement
+    - EnemyShotSide
     - LaserShoot
+    - PauseMenu
     - RocketMovement
     - ScenesChange
+    - ShipSound
+    - ShotSound
     - Speedometr
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -69,6 +74,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ScenesChange
     methodName: NextScene
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Resume
+  - assembly: Assembly-CSharp
+    fullTypeName: ScenesChange
+    methodName: NextScene
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -95,6 +106,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -102,27 +117,43 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2364}
+      Script: {instanceID: 1550}
     - Class: 114
-      Script: {instanceID: 2658}
+      Script: {instanceID: 2366}
     - Class: 114
-      Script: {instanceID: 2886}
+      Script: {instanceID: 2660}
     - Class: 114
-      Script: {instanceID: 4976}
+      Script: {instanceID: 2888}
     - Class: 114
-      Script: {instanceID: 5066}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 5350}
+      Script: {instanceID: 3588}
     - Class: 114
-      Script: {instanceID: 5610}
+      Script: {instanceID: 3686}
     - Class: 114
-      Script: {instanceID: 5950}
+      Script: {instanceID: 4984}
     - Class: 114
-      Script: {instanceID: 5964}
+      Script: {instanceID: 5074}
     - Class: 114
-      Script: {instanceID: 6452}
+      Script: {instanceID: 5358}
     - Class: 114
-      Script: {instanceID: 6968}
+      Script: {instanceID: 5536}
+    - Class: 114
+      Script: {instanceID: 5620}
+    - Class: 114
+      Script: {instanceID: 5808}
+    - Class: 114
+      Script: {instanceID: 5960}
+    - Class: 114
+      Script: {instanceID: 5974}
+    - Class: 114
+      Script: {instanceID: 6316}
+    - Class: 114
+      Script: {instanceID: 6464}
+    - Class: 114
+      Script: {instanceID: 6980}
+    - Class: 114
+      Script: {instanceID: 8408}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -138,6 +169,8 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -168,6 +201,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -175,31 +212,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1548}
+      Script: {instanceID: 1550}
     - Class: 114
-      Script: {instanceID: 2220}
+      Script: {instanceID: 2222}
     - Class: 114
-      Script: {instanceID: 2658}
+      Script: {instanceID: 2660}
     - Class: 114
-      Script: {instanceID: 2886}
+      Script: {instanceID: 2888}
     - Class: 114
-      Script: {instanceID: 3190}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 4156}
+      Script: {instanceID: 4162}
     - Class: 114
-      Script: {instanceID: 4268}
+      Script: {instanceID: 4274}
     - Class: 114
-      Script: {instanceID: 4542}
+      Script: {instanceID: 4548}
     - Class: 114
-      Script: {instanceID: 5328}
+      Script: {instanceID: 5336}
     - Class: 114
-      Script: {instanceID: 5798}
+      Script: {instanceID: 5808}
     - Class: 114
-      Script: {instanceID: 5950}
+      Script: {instanceID: 5960}
     - Class: 114
-      Script: {instanceID: 6106}
+      Script: {instanceID: 6116}
     - Class: 114
-      Script: {instanceID: 6452}
+      Script: {instanceID: 6464}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -549,6 +586,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: c8c5e65e9fb858572516474d6e2102bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
+  - hash:
+      serializedVersion: 2
       Hash: 7536c3aaa3b668b80f1580147a12d30d
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -571,6 +614,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 9f711bc272a94ed59e3592ae1892504c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShipSound
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -730,6 +779,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GunShot
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerClickMessageListener
@@ -879,6 +934,12 @@ ScriptsOnlyBuild:
     className: PanelEventHandler
   - hash:
       serializedVersion: 2
+      Hash: a0fa2787364b42415cbff14ff951845c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyShotSide
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -955,6 +1016,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpAsButtonMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 98ea83c1bb0dde26d9cd8fafd3d8ae3f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShotSound
   - hash:
       serializedVersion: 2
       Hash: 6663435805926faf16934aed992cd26b
@@ -1249,6 +1316,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 7447fc1d909a52f9490ec43839292d67
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyMovement
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
