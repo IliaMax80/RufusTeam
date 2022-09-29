@@ -6,9 +6,11 @@ public class LaserShoot : MonoBehaviour
 {
     //[SerializeField] private GameObject laser;
     //[SerializeField] private GameObject GunPoint;
+    public float LoopTime;
     public float size;
     private LineRenderer lazer;
     private bool updatePosition;
+    private float _time;
 
 
     // Start is called before the first frame update
@@ -19,21 +21,30 @@ public class LaserShoot : MonoBehaviour
 
     }
 
-// Update is called once per frame
-void Update()
-    { 
+    // Update is called once per frame
+    void Update()
+    {
+
         RaycastHit hit;
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit))
+            if (_time > LoopTime)
             {
-                if (hit.collider.gameObject.GetComponent<AsteroidImpulse>())
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit))
                 {
-                    StartCoroutine(shot(hit.collider.gameObject, hit.point));
-                    
+                    Debug.Log(hit.collider.gameObject);
+                    if (hit.collider.gameObject.GetComponent<AsteroidImpulse>())
+                    {
+                        StartCoroutine(shot(hit.collider.gameObject, hit.point));
+                    }
                 }
+                _time = 0;
             }
         }
+        else
+            _time += Time.deltaTime;
+
+
         if (updatePosition)
         {
             lazer.SetPosition(0, transform.position);
@@ -49,6 +60,7 @@ void Update()
         lazer.SetPosition(1, targetPosition);
         yield return new WaitForSeconds(0.1f);
         lazer.positionCount = 0;
+        target.GetComponent<Explosions>().Explode();
         Destroy(target);
         updatePosition = false;
 

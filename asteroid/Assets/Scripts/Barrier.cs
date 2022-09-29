@@ -5,14 +5,14 @@ using UnityEngine;
 public class Barrier : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    private void OnTriggerExit(Collider other)
     {
-        
+
+        GameObject Object = other.gameObject;
+        if (Object.GetComponent<Bullet>())
+        {
+            Destroy(Object);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

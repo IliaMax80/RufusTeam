@@ -18,7 +18,6 @@ public class EnemyShotSide : MonoBehaviour
             Vector3 vectorPlayer = localPosition / localPosition.magnitude;
             IndexSide = GetDirectionOnForward(vectorPlayer);
             fire = true;
-            Debug.Log(IndexSide);
         }
         else
         {

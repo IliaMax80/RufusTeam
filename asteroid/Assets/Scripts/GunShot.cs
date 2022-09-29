@@ -5,6 +5,8 @@ using UnityEngine;
 public class GunShot : MonoBehaviour
 {
     public int IndexSide;
+    public float LoopTime;
+    private float time;
     [SerializeField] private GameObject bulletPrefab;
     private GameObject bullet;
     private EnemyShotSide header;
@@ -12,8 +14,6 @@ public class GunShot : MonoBehaviour
     private void Start()
     {
         header = GetComponentInParent<EnemyShotSide>();
-
-
     }
 
     // Update is called once per frame
@@ -21,12 +21,23 @@ public class GunShot : MonoBehaviour
     {
         if (header.fire)
         {
-            if(header.IndexSide == IndexSide)
+            if (time > LoopTime)
             {
-                bullet = Instantiate(bulletPrefab);
-                bullet.transform.position = transform.position;
-                bullet.transform.LookAt(header.Player.transform);
+
+                if (header.IndexSide == IndexSide)
+                {
+                    bullet = Instantiate(bulletPrefab);
+                    bullet.transform.position = transform.position;
+                    bullet.transform.LookAt(header.Player.transform);
+                    bullet.transform.Rotate(0, -90, 0);
+                }
+                time = 0;
             }
+            time += Time.deltaTime;
+        }
+        else
+        {
+            time = LoopTime + 1.0f; 
         }
     }
 }
