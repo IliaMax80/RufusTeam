@@ -118,6 +118,7 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
+-define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
@@ -329,6 +330,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Services.Core.Analytics.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Services.Core.Environments.ref.dll"
@@ -368,18 +371,20 @@
 "Assets/Scripts/Barrier.cs"
 "Assets/Scripts/Bullet.cs"
 "Assets/Scripts/CameraMove.cs"
-"Assets/Scripts/CommitTest.cs"
+"Assets/Scripts/Compass.cs"
+"Assets/Scripts/Enemy.cs"
 "Assets/Scripts/EnemyMovement.cs"
-"Assets/Scripts/EnemyShotSide.cs"
 "Assets/Scripts/Explosions.cs"
 "Assets/Scripts/GunShot.cs"
 "Assets/Scripts/LaserShoot.cs"
 "Assets/Scripts/PauseMenu.cs"
+"Assets/Scripts/PlayerCount.cs"
 "Assets/Scripts/RocketMovement.cs"
 "Assets/Scripts/ScenesChange.cs"
 "Assets/Scripts/ShipSound.cs"
 "Assets/Scripts/ShotSound.cs"
 "Assets/Scripts/Speedometr.cs"
+"Assets/Scripts/VictoryOrLose.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"

@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class Speedometr : MonoBehaviour
 {
-    [SerializeField] private Text text;
-    private RocketMovement flight;
+    [SerializeField] private Text _text;
+    private RocketMovement _flight;
 
     private float _speed;
 
     void Start()
     {
-        flight = GetComponent<RocketMovement>();
+        _flight = GetComponent<RocketMovement>();
     }
 
     void FixedUpdate()
     {
-        _speed = flight.speed*20.0f;
-        text.text = "SPEED: " + ((int)_speed).ToString() + " km/h";
+        _speed = _flight.speed*20.0f;
+        _text.text = "SPEED: " + ((int)_speed).ToString() + " km/h";
     }
 }

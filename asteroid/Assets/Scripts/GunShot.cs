@@ -7,29 +7,29 @@ public class GunShot : MonoBehaviour
     public int IndexSide;
     public float LoopTime;
     private float time;
-    [SerializeField] private GameObject bulletPrefab;
-    private GameObject bullet;
-    private EnemyShotSide header;
+    [SerializeField] private GameObject _bulletPrefab;
+    private GameObject _bullet;
+    private Enemy _header;
     // Start is called before the first frame update
     private void Start()
     {
-        header = GetComponentInParent<EnemyShotSide>();
+        _header = GetComponentInParent<Enemy>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (header.fire)
+        if (_header.fire)
         {
             if (time > LoopTime)
             {
 
-                if (header.IndexSide == IndexSide)
+                if (_header.IndexSide == IndexSide)
                 {
-                    bullet = Instantiate(bulletPrefab);
-                    bullet.transform.position = transform.position;
-                    bullet.transform.LookAt(header.Player.transform);
-                    bullet.transform.Rotate(0, -90, 0);
+                    _bullet = Instantiate(_bulletPrefab);
+                    _bullet.transform.position = transform.position;
+                    _bullet.transform.LookAt(_header.Player.transform);
+                    _bullet.transform.Rotate(0, -90, 0);
                 }
                 time = 0;
             }

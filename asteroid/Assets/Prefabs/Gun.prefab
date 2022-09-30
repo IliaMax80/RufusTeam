@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IndexSide: 0
   LoopTime: 1
-  bulletPrefab: {fileID: 1393771707832583156, guid: 10d11c513301a954c93d5894b262fc5a, type: 3}
+  _bulletPrefab: {fileID: 1393771707832583156, guid: 10d11c513301a954c93d5894b262fc5a, type: 3}

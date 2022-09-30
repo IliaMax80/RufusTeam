@@ -13,6 +13,10 @@ public class Barrier : MonoBehaviour
         {
             Destroy(Object);
         }
+        else if (Object.GetComponent<PlayerCount>())
+        {
+            Object.transform.position = Object.transform.position * -1;
+        }
     }
 
 }

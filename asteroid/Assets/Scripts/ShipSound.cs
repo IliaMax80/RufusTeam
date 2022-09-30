@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class ShipSound : MonoBehaviour
 {
-    AudioSource audioSource;
-    public float minPitch = 1f;
-    public float maxPitch = 2f;
-    private float pitchFromCar;
-    public float maxSpeed;
+    private AudioSource _audioSource;
+    public float MinPitch = 1f;
+    public float MaxPitch = 2f;
+    private float _pitchFromCar;
+    public float MaxSpeed;
     public float minSpeed;
-    private RocketMovement speed;
+    private RocketMovement _speed;
 
     // Start is called before the first frame update
     void Start()
     {
-        speed = GetComponent<RocketMovement>();
-        audioSource = GetComponent<AudioSource>();
-        audioSource.pitch = minPitch;
+        _speed = GetComponent<RocketMovement>();
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.pitch = MinPitch;
     }
 
     // Update is called once per frame
     void Update()
     {
-        pitchFromCar = speed.speed * 0.08f;
-        audioSource.pitch = pitchFromCar;
+        _pitchFromCar = _speed.speed * 0.08f;
+        _audioSource.pitch = _pitchFromCar;
     }
 
 }

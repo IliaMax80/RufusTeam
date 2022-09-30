@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShotSound : MonoBehaviour
 {
     AudioSource audioSource;
-    public AudioClip shot;
+    public AudioClip Shot;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,6 @@ public class ShotSound : MonoBehaviour
 
     public void audioPlay()
     {
-            audioSource.PlayOneShot(shot, 1F);
+            audioSource.PlayOneShot(Shot, 1F);
     }
 }

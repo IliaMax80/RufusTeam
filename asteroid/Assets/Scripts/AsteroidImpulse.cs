@@ -12,10 +12,4 @@ public class AsteroidImpulse : MonoBehaviour
         rb.angularVelocity = Random.insideUnitSphere;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, 0, 100) * Time.fixedDeltaTime);
-        //rb.MoveRotation(deltaRotation);
-    }
 }

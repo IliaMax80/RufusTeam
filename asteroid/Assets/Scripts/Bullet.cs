@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed;
-    // Start is called before the first frame update
-    
+    public float Speed;
 
-    // Update is called once per frame
     void Update()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
+        transform.Translate(Speed * Time.deltaTime, 0, 0);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<PlayerCount>())
+        {
+            collision.gameObject.GetComponent<PlayerCount>().HP -= 1;
+            Destroy(gameObject);
+        }
     }
 }

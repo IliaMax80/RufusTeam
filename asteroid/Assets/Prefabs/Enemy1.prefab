@@ -19259,6 +19259,8 @@ GameObject:
   - component: {fileID: 8551407428534564558}
   - component: {fileID: 4684702571246352747}
   - component: {fileID: 7415070559432576417}
+  - component: {fileID: 2295406849945921926}
+  - component: {fileID: 2705540454886496771}
   - component: {fileID: 4684702571246352744}
   - component: {fileID: 4684702571246352751}
   - component: {fileID: 4684702571246352750}
@@ -19354,6 +19356,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2295406849945921926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9072328908182924404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a851cc190f065d7439eca080faa7cd83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionPrefab: {fileID: 100000, guid: 15ca5b8fa431dc04291a79cadcd19874, type: 3}
+--- !u!114 &2705540454886496771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9072328908182924404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c28cdae8875f54facbf9f0f8c77991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0
+  SpeedRotate: 0
 --- !u!114 &4684702571246352744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19380,6 +19409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb747d5f92c3d24d8c536f91dbb9dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 0
   fire: 0
   IndexSide: 0
   Player: {fileID: 0}
